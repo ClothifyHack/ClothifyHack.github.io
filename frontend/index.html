@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inditex - Estado del Pedido</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <!-- Pestaña inicial -->
+  <div class="welcome-tab">
+    <h2>Bienvenido al Sistema de Seguimiento de Pedidos</h2>
+    <p>Ingresa el ID de tu pedido para ver su estado y detalles.</p>
+    <button onclick="showForm()">Comenzar</button>
+  </div>
+
+  <!-- Formulario de búsqueda (oculto inicialmente) -->
+  <div id="searchForm" style="display: none;">
+    <h1>Estado del Pedido</h1>
+    <form id="orderForm">
+      <label for="orderId">ID del Pedido:</label>
+      <input type="text" id="orderId" name="orderId" required placeholder="Ej: 12345678901">
+      <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Detalles del pedido -->
+    <div id="orderDetails"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
