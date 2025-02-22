@@ -20,7 +20,6 @@ document.getElementById('orderForm').addEventListener('submit', async function (
         alert('El ID del pedido debe tener exactamente 11 caracteres.');
         return;
     }
-
     try {
         console.log(`🔄 Realizando solicitud para Order ID: ${orderId}`);
         const response = await fetch(`https://clothifyhack-github-io-1.onrender.com/api/order-status/${orderId}`);
