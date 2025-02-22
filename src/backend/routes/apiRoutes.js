@@ -3,7 +3,8 @@ const apiController = require('../controllers/apiController');
 
 const router = express.Router();
 
-// Ruta de prueba
+// Ruta de pruebaa
+
 router.get('/test', (req, res) => {
     res.json({ message: '¡El backend funciona correctamente!' });
 });
