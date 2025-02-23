@@ -1,7 +1,7 @@
 /* Estilos base (Computer-first) */
 @font-face {
     font-family: 'Letra';
-    src: url('./components/fonts/Letra.otf') format('opentype');
+    src: url('./Letra.otf') format('opentype');
 }
 body {
     font-family: 'Letra', sans-serif;
