@@ -11,11 +11,11 @@ app.use(express.json());
 
 // Configuración de credenciales y URLs
 const {
-    CLIENT_ID = 'oauth-mkplace-oauthhsalylbqzbjfzagwzopropro',
-    CLIENT_SECRET = 'yNw.Zt[5mo5nfG6h',
-    AUTH_URL = 'https://auth.inditex.com:443/openam/oauth2/itxid/itxidmp/access_token',
-    API_BASE_URL = 'https://api.inditex.com/pubordtrcK/lefties/orders',
-    VISUAL_SEARCH_API_URL = 'https://api.inditex.com/pubvsearch'
+    CLIENT_ID = 'oauth-mkpsbox-oauthlzjswhdwdfzchfeazqsnbxpro',
+    CLIENT_SECRET = 'gpJ[eN67T16{4FTG',
+    AUTH_URL = 'https://auth.inditex.com/openam/oauth2/itxid/itxidmp/sandbox/access_token',
+    API_BASE_URL = 'https://api-sandbox.inditex.com/pubordtrck-sandbox/lefties/orders',
+    VISUAL_SEARCH_API_URL = 'https://api-sandbox.inditex.com/pubvsearch-sandbox/products'
 } = process.env;
 
 // Función para obtener el token de acceso para la API de pedidos
