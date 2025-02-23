@@ -3,91 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página con Nav</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        /* Estilos para el nav */
-        nav {
-            background-color: #007bff;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        nav .logo {
-            color: #fff;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 20px;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
-        nav ul li a:hover {
-            color: #ffdd57;
-        }
-        /* Estilos para el contenido principal */
-        .container {
-            padding: 20px;
-            text-align: center;
-        }
-        .btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #fff;
-            background-color: #007bff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <title>Subir Imagen</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <nav>
-        <div class="logo">Mi Sitio</div>
-        <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="frontend/index.html">Fronted</a></li>
-            <li><a href="/about.html">Acerca de</a></li>
-            <li><a href="/contact.html">Contacto</a></li>
+
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <a href="" class="navbar-logo-img">
+            <img src="Clothify_blanco.png" alt="Clothify">
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="frontend/index.html" class="navbar-link">Pedidos</a></li>
+            <li><a href="contact" class="navbar-link">Contacto</a></li>
+
+
         </ul>
-    </nav>
-
-    <!-- Contenido principal -->
-    <div class="container">
-        <h1>Bienvenido a la Página Principal</h1>
-        <p>Haz clic en el botón para ir a la página de Fronted.</p>
-        <button class="btn" onclick="irAFronted()">Ir a Fronted</button>
     </div>
+</nav>
 
-    <script>
-        function irAFronted() {
-            // Redirige al usuario a /fronted/index.html
-            window.location.href = '/fronted/index.html';
-        }
-    </script>
+<!-- Contenido principal -->
+<div class="container">
+    <h1>Find your clothes, Show your soul</h1>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <div class="file-input">
+            <label for="image-upload">Selecciona una imagen:</label>
+            <input type="file" id="image-upload" name="image-upload" accept="image/*">
+        </div>
+        <button type="submit">Buscar</button>
+    </form>
+</div>
 </body>
 </html>
