@@ -3,6 +3,7 @@
     font-family: 'Letra';
     src: url('./Letra.otf') format('opentype');
 }
+
 body {
     font-family: 'Letra', sans-serif;
     margin: 0;
@@ -94,7 +95,7 @@ body::before {
 .container {
     background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
     padding: 30px; /* Más padding para mayor espacio interno */
-    border-radius: 0px; /* Bordes más redondeados */
+    border-radius: 10px; /* Bordes más redondeados */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
     width: 100%;
     max-width: 500px;
@@ -111,6 +112,31 @@ h1 {
     font-size: 28px; /* Tamaño de fuente más grande */
     color: #333;
     font-weight: 600; /* Texto más grueso */
+}
+
+/* Bloque de texto decorativo */
+.text-block {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde sutil */
+}
+
+.text-block-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-block-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 /* Campo de entrada de archivo */
@@ -130,7 +156,7 @@ input[type="file"] {
     width: 80%;
     padding: 12px;
     border: 2px solid #ccc; /* Borde más grueso */
-    border-radius: 0px; /* Bordes más redondeados */
+    border-radius: 10px; /* Bordes más redondeados */
     font-size: 16px;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
     transition: border-color 0.3s ease; /* Transición suave */
@@ -147,7 +173,7 @@ button {
     color: #fff;
     border: none;
     padding: 12px 25px; /* Más padding para un botón más grande */
-    border-radius: 0px; /* Bordes más redondeados */
+    border-radius: 10px; /* Bordes más redondeados */
     font-size: 18px; /* Tamaño de fuente más grande */
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
