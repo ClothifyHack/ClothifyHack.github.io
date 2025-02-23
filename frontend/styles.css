@@ -1,0 +1,275 @@
+/* Estilos base (Computer-first) */
+@font-face {
+    font-family: 'Letra';
+    src: url('Letra.otf') format('opentype');
+}
+
+body {
+    font-family: 'Letra', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pseudo-elemento para la imagen de fondo con desenfoque */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('perchas.jpg'); /* URL de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px); /* Aplica el desenfoque */
+    z-index: -1; /* Coloca la capa detrás del contenido */
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    padding: 30px; /* Más padding para mayor espacio interno */
+    border-radius: 0px; /* Bordes más redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: auto; /* Centra el contenedor horizontalmente */
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+}
+
+/* Barra de navegación */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0; /* Ajusta el padding vertical */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto; /* Asegúrate de que no tenga una altura fija */
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Tamaño de fuente más grande */
+    margin-left: 25px; /* Más espacio entre enlaces */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efecto de transformación */
+}
+
+.navbar-link:hover {
+    color: #ffcc00; /* Cambia el color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de levitación */
+    text-decoration: none;
+}
+
+/* Pestaña inicial */
+.welcome-tab {
+    text-align: center;
+}
+
+.welcome-tab h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.welcome-tab p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.welcome-tab button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 0px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.welcome-tab button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.welcome-tab button:active {
+    transform: translateY(0);
+}
+
+/* Formulario de búsqueda */
+#searchForm {
+    text-align: center;
+}
+
+#searchForm h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+#searchForm label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+}
+
+#searchForm input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 0px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: border-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#searchForm input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#searchForm button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 0px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#searchForm button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+#searchForm button:active {
+    transform: translateY(0);
+}
+
+/* Detalles del pedido */
+#orderDetails {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+}
+
+/* Media Queries para Tablet */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .welcome-tab h2 {
+        font-size: 22px;
+    }
+
+    .welcome-tab p {
+        font-size: 14px;
+    }
+
+    .welcome-tab button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #searchForm h1 {
+        font-size: 24px;
+    }
+
+    #searchForm label {
+        font-size: 16px;
+    }
+
+    #searchForm input[type="text"] {
+        font-size: 14px;
+    }
+
+    #searchForm button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #orderDetails {
+        font-size: 14px;
+    }
+}
+
+/* Media Queries para Móvil */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .welcome-tab h2 {
+        font-size: 20px;
+    }
+
+    .welcome-tab p {
+        font-size: 12px;
+    }
+
+    .welcome-tab button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #searchForm h1 {
+        font-size: 22px;
+    }
+
+    #searchForm label {
+        font-size: 14px;
+    }
+
+    #searchForm input[type="text"] {
+        font-size: 12px;
+    }
+
+    #searchForm button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #orderDetails {
+        font-size: 12px;
+    }
+}
