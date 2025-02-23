@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Clothify</title>
+    <link rel="stylesheet" href="contactostyles.css">
+</head>
+<body>
+<!-- Barra de navegación -->
+<nav class="navbar">
+    <div class="navbar-container">
+        <ul class="navbar-menu">
+            <li><a href="../index.html" class="navbar-link">Home</a></li>
+            <li><a href="../../../Downloads/index.html" class="navbar-link">Pedidos</a></li>
+            <li><a href="../../../Downloads/busqueda_porimg.html" class="navbar-link">Productos</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Contenido principal -->
+<div class="container">
+    <h2>¿Tienes alguna pregunta o necesitas ayuda? ¡No dudes en contactarnos!</h2>
+
+    <!-- Detalles de contacto -->
+    <div class="contact-details">
+        <h1>Información de Contacto</h1>
+        <p><strong>Correo electrónico:</strong> clothify.hack@gmail.com</p>
+    </div>
+
+    <!-- Botones de compartir -->
+    <div class="share-buttons">
+        <h2>Comparte esta página</h2>
+        <a href="#" id="share-facebook" class="share-icon">
+            <img src="icons8-facebook-50.png" alt="Facebook">
+        </a>
+        <a href="#" id="share-twitter" class="share-icon">
+            <img src="icons8-twitter-50.png" alt="Twitter">
+        </a>
+        <a href="#" id="share-whatsapp" class="share-icon">
+            <img src="icons8-whatsapp-50.png" alt="WhatsApp">
+        </a>
+    </div>
+</div>
+
+<script>
+    // Funciones para compartir en redes sociales
+    const url = window.location.href;
+    const text = "¡Mira esta página increíble!";
+
+    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+    document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`;
+    document.getElementById('share-whatsapp').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}%20${encodeURIComponent(url)}`;
+</script>
+
+</body>
+</html>

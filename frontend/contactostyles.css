@@ -1,0 +1,239 @@
+/* Estilos base (Computer-first) */
+@font-face {
+    font-family: 'Letra';
+    src: url('Letra.otf') format('opentype');
+}
+body {
+    font-family: 'Letra', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pseudo-elemento para la imagen de fondo con desenfoque */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('contacto.jpg'); /* URL de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(4px); /* Aplica el desenfoque */
+    z-index: -1; /* Coloca la capa detrás del contenido */
+}
+
+/* Barra de navegación */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px 0; /* Ajusta el padding vertical */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    height: auto; /* Asegúrate de que no tenga una altura fija */
+}
+
+/* Estilos para el logo */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    border: none; /* Elimina el borde alrededor de la imagen */
+}
+
+.navbar-logo img {
+    height: 40px; /* Tamaño del logo */
+    width: auto; /* Mantiene la proporción */
+    border: none; /* Elimina el borde alrededor de la imagen */
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Tamaño de fuente más grande */
+    margin-left: 25px; /* Más espacio entre enlaces */
+    transition: color 0.3s ease, transform 0.3s ease; /* Efecto de transformación */
+}
+
+.navbar-link:hover {
+    color: #ffcc00; /* Cambia el color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de levitación */
+    text-decoration: none;
+}
+
+/* Contenedor principal */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+    padding: 30px; /* Más padding para mayor espacio interno */
+    border-radius: 0px; /* Bordes más redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: auto; /* Centra el contenedor horizontalmente */
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
+}
+
+/* Título del formulario */
+h1 {
+    margin-bottom: 25px;
+    font-size: 28px; /* Tamaño de fuente más grande */
+    color: #333;
+    font-weight: 600; /* Texto más grueso */
+}
+
+/* Campo de entrada de archivo */
+.file-input {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 18px; /* Tamaño de fuente más grande */
+    color: #555;
+    font-weight: 500; /* Texto más grueso */
+}
+
+input[type="file"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ccc; /* Borde más grueso */
+    border-radius: 0px; /* Bordes más redondeados */
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    transition: border-color 0.3s ease; /* Transición suave */
+}
+
+input[type="file"]:focus {
+    border-color: #007bff; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Botón de enviar */
+button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 25px; /* Más padding para un botón más grande */
+    border-radius: 0px; /* Bordes más redondeados */
+    font-size: 18px; /* Tamaño de fuente más grande */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+button:hover {
+    background-color: #333; /* Cambia el color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de levitación */
+}
+
+button:active {
+    transform: translateY(0); /* Vuelve a la posición original al hacer clic */
+}
+
+/* Media Queries para Tablet */
+@media (max-width: 768px) {
+    .navbar-container {
+        width: 95%;
+    }
+
+    .navbar-logo {
+        font-size: 22px;
+    }
+
+    .navbar-link {
+        font-size: 14px;
+    }
+
+    .container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input[type="file"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Media Queries para Móvil */
+@media (max-width: 480px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        margin-top: 10px;
+    }
+
+    .navbar-link {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="file"] {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
