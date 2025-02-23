@@ -69,7 +69,7 @@
                 imageUrlDiv.innerHTML = `<p>URL pública de la imagen: <a href="${imageUrl}" target="_blank">${imageUrl}</a></p>`;
 
                 // Enviar la URL de la imagen al backend para buscar productos
-                fetch('http://localhost:3001/buscar-productos', {
+                fetch('https://clothifyhack-github-io-1.onrender.com/buscar-productos', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

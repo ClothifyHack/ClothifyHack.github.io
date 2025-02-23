@@ -23,7 +23,7 @@ document.getElementById('orderForm').addEventListener('submit', async function (
 
     try {
         console.log(`🔄 Realizando solicitud para Order ID: ${orderId}`);
-        const response = await fetch(`https://clothifyhack-github-io-1.onrender.com/api/order-status/${orderId}`);
+        const response = await fetch(`http://localhost:3001/api/order-status/${orderId}`);
 
         // Verifica si la respuesta es OK (código 200-299)
         if (!response.ok) {
